@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "version": "0.1",
+  "description": "My 2nd task",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "firstCode"
+  },
+  "keywords": [
+    "keyword"
+  ],
+  "author": "Owais",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.6"
+  }
+}
