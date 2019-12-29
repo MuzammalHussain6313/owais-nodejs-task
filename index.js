@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/owaisTable', {useNewUrlParser: true}, ()=>console.log('connected'));
+//mongoose.connect('mongodb://localhost:27017/owaisTable', {useNewUrlParser: true}, ()=>console.log('connected'));
 
+mongoose.connect('mongodb+srv://owais:khattak.com@cluster0-cy7f9.mongodb.net/test?retryWrites=true&w=majority',
+                 {useNewUrlParser: true},
+    ()=>console.log('connected'));
 const Student = mongoose.model('Student', {
     name: String,
     id: Number,
@@ -74,4 +77,9 @@ app.get('/getStudents', async (req, res) => {
 
 app.listen(4500, () => {
     console.log('port of server is 4500');
+});
+
+app.listen(process.env.PORT || 5000, () => {
+    console.log('Express application running on ');
+
 });
