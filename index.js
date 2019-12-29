@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost:27017/owaisTable', {useNewUrlParser: true}, ()=>console.log('connected'));
 
-mongoose.connect('mongodb+srv://owais:khattak.com@cluster0-cy7f9.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://owais:khattak.com@cluster0-cy7f9.mongodb.net/madDB?retryWrites=true&w=majority',
                  {useNewUrlParser: true},
     ()=>console.log('connected'));
 const User = mongoose.model('User', {
