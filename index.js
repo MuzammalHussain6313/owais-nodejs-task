@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://owais:khattak.com@cluster0-cy7f9.mongodb.net/test?retryWrites=true&w=majority',
                  {useNewUrlParser: true},
     ()=>console.log('connected'));
-const Student = mongoose.model('Student', {
+const User = mongoose.model('User', {
     name: String,
-    id: Number,
+    username: String,
     email: String,
     password: String
 });
@@ -60,20 +60,57 @@ app.post('/signup', async (req, res) => {
         res.send({message: 'Error'}).status(401);
     }
 });
-app.post('/postStudent', async (req, res) => {
-    const student = new Student(req.body);
-    console.log('student', student);
-    const result = await student.save();
+app.post('/postUser', async (req, res) => {
+    const user = new User(req.body);
+    console.log('User', user);
+    const result = await user.save();
     if (result) {
         res.send({
-            message: "Student inserted successfully."
+            message: "user inserted successfully."
         });
     }
 });
-app.get('/getStudents', async (req, res) => {
-    const allStudents = await Student.find();
-    res.send(allStudents);
+app.get('/getUsers', async (req, res) => {
+    const allusers = await User.find();
+    res.send(allusers);
 })
+
+app.post('/updateUser', async (req, res) => {
+    try {
+        const user = new User(req.body);
+        console.log('user', user);
+        const result = await user.updateOne();
+        if (result) {
+            res.send({
+                massage: "user Update Successfully"
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
+});
+app.post('/deleteUser', async (req, res) => {
+    try {
+        const user = new User(req.body);
+        const result = await user.delete();
+        if (result) {
+            res.send({
+                massage: 'user deleted Successfully.'
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
+});
+app.get('/getUsers', async (req, res) => {
+    const allUsers = await User.find();
+
+    console.log('users', allUsers);
+    res.send(allUsers);
+})
+
 
 app.listen(4500, () => {
     console.log('port of server is 4500');
