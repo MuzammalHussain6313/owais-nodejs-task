@@ -1,6 +1,6 @@
 {
   "name": "package",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "My 2nd task",
   "main": "index.js",
   "scripts": {
