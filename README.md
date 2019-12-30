@@ -10,7 +10,7 @@
 
 Connected with online cluster of mongodb.
 <ul>
-  </li>app is deployed in heroku.</li>
+  <li>app is deployed in heroku.</li>
   <li>API have following endpoints.</li>
 </ul>
 <ol>
