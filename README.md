@@ -10,7 +10,7 @@
 
 Connected with online cluster of mongodb.
 <ul>
-  <li></li>app is deployed in heroku.</li>
+  </li>app is deployed in heroku.</li>
   <li>API have following endpoints.</li>
 </ul>
 <ol>
@@ -26,11 +26,28 @@ Connected with online cluster of mongodb.
   <li><a href = "https://crud-node-apis.herokuapp.com/{id}">https://crud-node-apis.herokuapp.com/{id}</a></li>
 </ol>  
 
+<br><p>Login the page</p><br>
+<img src="images/s3.PNG" width="700" height="400"><br>
+<br>
+
+<br><p>Get List of Users</p><br>
+<img src="images/getUsers.PNG" width="700" height="400"><br>
+<br>
+
+<br><p>Post New User</p><br>
+<img src="images/post.PNG" width="700" height="400"><br>
+<br>
+
+<br><p>Online Database Cluster</p><br>
+<img src="images/cluster.PNG" width="700" height="400"><br>
+<br>
 
 <p>Insert new Student</p><br>
 <img src="images/s1.PNG" width="700" height="400"><br>
+
 <br><p>Return list of students.</p><br>
 <img src="images/s2.PNG" width="700" height="400"><br>
+
 <br><p>Login the page</p><br>
 <img src="images/s3.PNG" width="700" height="400"><br>
 <br>
